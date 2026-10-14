@@ -1,9 +1,13 @@
 import React from 'react';
 import { ShieldCheck, ArrowRight, Zap, FileText, CheckCircle2, TrendingUp, AlertTriangle } from 'lucide-react';
+import ParticlesCanvas from './ParticlesCanvas';
 
 export function Hero({ onScrollToRadar, onOpenSimulator, onOpenCAB }) {
   return (
     <section className="relative pt-12 pb-16 overflow-hidden bg-grid-pattern">
+      {/* Casberry-inspired Particles WebGL Canvas */}
+      <ParticlesCanvas particleColor="59, 130, 246" particleCount={50} />
+
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[360px] bg-blue-500/10 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[380px] h-[260px] bg-emerald-500/10 rounded-full blur-[110px] pointer-events-none" />

@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { DossierViewerModal } from './components/DossierViewerModal';
 import { WebhookSimulatorModal } from './components/WebhookSimulatorModal';
 import { CABModal } from './components/CABModal';
+import OutcomeChart from './components/OutcomeChart';
 import { MOCK_DISPUTES } from './data/mockDisputes';
 import { compileDossier } from './engine/dossierCompiler';
 
@@ -62,6 +63,9 @@ function App() {
             onOpenSimulator={() => setIsSimulatorOpen(true)}
             onOpenCAB={() => setIsCABOpen(true)}
           />
+
+          {/* Julien Bek $1:$6 Economic Engine / Larry Ellison SLA Proof */}
+          <OutcomeChart onCtaClick={() => setIsCABOpen(true)} />
 
           {/* Interactive Dispute Radar */}
           <DisputeRadar 
